@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +34,7 @@ body {
 
 .front-card {
     height: 100%;
-    width: 45%;
+    width: 55%;
     background: linear-gradient(rgb(104, 185, 216), rgb(22, 115, 255));
     border-radius: 20px;
     display: flex;
@@ -54,9 +55,9 @@ body {
 .profile {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     padding: 10px;
-    border-bottom: 1px dashed black;
 }
 
 .student-image {
@@ -78,163 +79,158 @@ body {
 .student-name-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .student-name {
     font-size: 20px;
-    font-weight: bold;  
+    font-weight: bold;
     font-weight: 700;
 }
 
 .student-class {
-      font-size: 15px;
-      color: rgb(114, 114, 114);
+    font-size: 15px;
+    color: rgb(114, 114, 114);
 }
 
-.locations{
-       display: flex;
-       flex-direction: column;
-       padding: 15px 10px;
-       border-bottom: 1px dashed;
+.locations {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
 }
 
-.from-to-container{
-      display: flex;
-      justify-content: space-between;  
+.from-to-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px dashed black;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(245, 245, 245);
 }
 
-.from,.to{
-       display: flex;
-       flex-direction: column;
+.from,
+.to {
+    display: flex;
+    flex-direction: column;
 }
 
-.to{
-      align-items: flex-end;
+.to {
+    align-items: flex-end;
 }
 
-.from :nth-child(1),.to :nth-child(1){
-        font-size: 12px;
-        color: rgb(128, 128, 128);
-}
-.from :nth-child(2),.to :nth-child(2){
-         font-size: 15px;
-}
-.from :nth-child(3),.to :nth-child(3){
-         font-size: 10px;
+.from :nth-child(1),
+.to :nth-child(1) {
+    font-size: 12px;
+    color: rgb(128, 128, 128);
 }
 
-.location-logo{
+.from :nth-child(2),
+.to :nth-child(2) {
+    font-size: 15px;
+}
+
+.from :nth-child(3),
+.to :nth-child(3) {
+    font-size: 10px;
+}
+
+.location-logo {
     height: 25px;
     width: 25px;
-      background-color: rgb(54, 162, 250);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      position: relative;
 }
 
-.location-logo::before{
-      content: '•------';
-      position: absolute;
-      top: 0;
-      right: 110%;
-      height: max-content;
-      width: max-content;   
-      color: rgb(54, 162, 250);
-}
-.location-logo::after{
-    content: '------•';
-    position: absolute;
-    top: 0;
-    left: 110%;
-    height: max-content;
-    width: max-content;   
-    color: rgb(54, 162, 250);
-}
-
-.location-logo i{
-       font-size: 20px;
-       color: white;
+.location-logo i {
+    font-size: 25px;
+    color: black;
 }
 
 
-.start-end-dates{
+.start-end-dates {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 25px;
     gap: 5px;
 }
 
-.start-date,.end-date{
-      border: 2px solid rgb(234, 234, 234);
-      padding: 5px;
-      font-size: 13px;
-      border-radius: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2px;
+.start-date,
+.end-date { 
+    font-size: 15px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-family: "Roboto", sans-serif;
 }
 
-.start-date i,.end-date i{
-       font-size: 17px;
-}
-
-
-.basic-details{
-       padding: 15px 10px;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       gap: 5px;
-}
-
-.basic-details > span{
-       display: flex;
-       flex-direction: column;
-}
-
-.basic-details > span :nth-child(1){
-       font-size: 15px;
-}
-
-.basic-details > span :nth-child(2){
-        color:rgb(54, 162, 250);
-        font-size: 18px;
-        align-self: flex-end;
-}
-
-.qr{
-      height: 80px;
-      width: 80px;
-      border: 1px solid black;
-      margin: 5px;
-      align-self: center;
-}
-
-.sign-container{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 100%;
+.start-date i,
+.end-date i {
+    font-size: 17px;
 }
 
 
-.sign-container > div{
-        width: 35%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3px;
+.basic-details {
+    margin: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    border-top: 1.5px solid rgb(185, 185, 185);
 }
-.sign-container > div :nth-child(1){
+
+.basic-details>span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.basic-details>span :nth-child(1) {
+    font-size: 12px;
+    color: rgb(71, 71, 71);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.basic-details>span :nth-child(2) {
+    font-weight: bold;
+    font-size: 12px;
+    align-self: flex-end;
+}
+
+.qr {
+    height: 90px;
+    width: 90px;
+    border: 1px solid black;
+    margin: 5px;
+    align-self: center;
+}
+
+.sign-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.sign-container>div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.sign-container>div :nth-child(1) {
     width: 100%;
     height: 30px;
     border: 1px solid black;
 }
 
-.sign-container > div :nth-child(2){
-    font-size: 12px;
+.sign-container>div :nth-child(2) {
+    font-size: 13px;
 }
