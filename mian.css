@@ -24,23 +24,32 @@ body {
 }
 
 .pass-container {
-    display: flex;
-    width: 50vw;
+    width: 27.5vw;
     height: 90vh;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s;
+    transform-origin:top;
 }
 
 
 /* Front Card design */
 
 .front-card {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    width: 55%;
+    width: 100%;
     background: linear-gradient(rgb(104, 185, 216), rgb(22, 115, 255));
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .details-card {
@@ -233,4 +242,40 @@ body {
 
 .sign-container>div :nth-child(2) {
     font-size: 13px;
+}
+
+
+
+/* Css for back card  Used for dates*/
+
+.pass-container{
+    transform:rotateY(180deg);
+}
+
+.back-card {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(22, 115, 255),rgb(104, 185, 216));
+    border-radius: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.back-card > h2{
+       position: absolute;
+       left: 0;
+       bottom: 0;
+}
+
+.upper{
+      position: absolute;
+      height: 50%;
+      width: 100%;
+      background-color: white;
+      border-radius: 50%;
+      top: -25%;
 }
