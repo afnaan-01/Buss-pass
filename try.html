@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: dimgrey;
+}
+
+.pass-container {
+    display: flex;
+    width: 50vw;
+    height: 90vh;
+}
+
+
+/* Front Card design */
+
+.front-card {
+    height: 100%;
+    width: 45%;
+    background: linear-gradient(rgb(104, 185, 216), rgb(22, 115, 255));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-card {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px dashed black;
+}
+
+.student-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+
+
+}
+
+.student-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.student-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name {
+    font-size: 20px;
+    font-weight: bold;  
+    font-weight: 700;
+}
+
+.student-class {
+      font-size: 15px;
+      color: rgb(114, 114, 114);
+}
+
+.locations{
+       display: flex;
+       flex-direction: column;
+       padding: 15px 10px;
+       border-bottom: 1px dashed;
+}
+
+.from-to-container{
+      display: flex;
+      justify-content: space-between;  
+}
+
+.from,.to{
+       display: flex;
+       flex-direction: column;
+}
+
+.to{
+      align-items: flex-end;
+}
+
+.from :nth-child(1),.to :nth-child(1){
+        font-size: 12px;
+        color: rgb(128, 128, 128);
+}
+.from :nth-child(2),.to :nth-child(2){
+         font-size: 15px;
+}
+.from :nth-child(3),.to :nth-child(3){
+         font-size: 10px;
+}
+
+.location-logo{
+    height: 25px;
+    width: 25px;
+      background-color: rgb(54, 162, 250);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: relative;
+}
+
+.location-logo::before{
+      content: '•------';
+      position: absolute;
+      top: 0;
+      right: 110%;
+      height: max-content;
+      width: max-content;   
+      color: rgb(54, 162, 250);
+}
+.location-logo::after{
+    content: '------•';
+    position: absolute;
+    top: 0;
+    left: 110%;
+    height: max-content;
+    width: max-content;   
+    color: rgb(54, 162, 250);
+}
+
+.location-logo i{
+       font-size: 20px;
+       color: white;
+}
+
+
+.start-end-dates{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.start-date,.end-date{
+      border: 2px solid rgb(234, 234, 234);
+      padding: 5px;
+      font-size: 13px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+}
+
+.start-date i,.end-date i{
+       font-size: 17px;
+}
+
+
+.basic-details{
+       padding: 15px 10px;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       gap: 5px;
+}
+
+.basic-details > span{
+       display: flex;
+       flex-direction: column;
+}
+
+.basic-details > span :nth-child(1){
+       font-size: 15px;
+}
+
+.basic-details > span :nth-child(2){
+        color:rgb(54, 162, 250);
+        font-size: 18px;
+        align-self: flex-end;
+}
+
+.qr{
+      height: 80px;
+      width: 80px;
+      border: 1px solid black;
+      margin: 5px;
+      align-self: center;
+}
+
+.sign-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+}
+
+
+.sign-container > div{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+}
+.sign-container > div :nth-child(1){
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.sign-container > div :nth-child(2){
+    font-size: 12px;
+}
+    </style>
+
+
+
+    <body>
+
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus pass</title>
+
+    <link rel="stylesheet" href="./mian.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="pass-container">
+            <div class="front-card">
+                <div class="details-card">
+
+                    <div class="profile">
+                        <span class="student-name-container">
+                            <span class="student-name">Rohan Roy</span>
+                            <span class="student-class">B.Tech</span>
+                        </span>
+                    </div>
+
+                    <div class="locations">
+                        <div class="from-to-container">
+                            <div class="from">
+                                <span>From</span>
+                                <span class="from-name">Thane</span>
+                                <span class="from-address">Thane, 400003</span>
+                            </div>
+
+                            <div class="location-logo"><i class="ri-bus-fill"></i></div>
+
+                            <div class="to">
+                                <span>To</span>
+                                <span class="to-name">Mumbai</span>
+                                <span class="to-address">Mumbai, 400001</span>
+                            </div>
+                        </div>
+
+                        <div class="start-end-dates">
+                            <div class="start-date"><i class="ri-calendar-check-line"></i> 23,Aug,2024</div>
+                            <span>To</span>
+                            <div class="end-date"><i class="ri-calendar-close-line"></i> 21,Sep,2024</div>
+                        </div>
+                    </div>
+
+
+                    <div class="basic-details">
+                        <span class="age-c">
+                            <span>Age:</span>
+                            <span id="age">23</span>
+                        </span>
+                        <span class="pass-id-c">
+                            <span>Pass Id:</span>
+                            <span id="padd-id">30988723</span>
+                        </span>
+                        <span class="fees-c">
+                            <span>Pass Fees:</span>
+                            <span id="fees">1000</span>
+                        </span>
+                        <span class="institute-address">
+                            <span>Institute Name:</span>
+                            <span id="institute-address">Science college</span>
+                        </span>
+                    </div>
+
+                    <div class="qr">
+
+                    </div>
+
+                    <div class="sign-container">
+                        <div>
+                            <span id="controller-sign">
+                             
+                            </span>
+                            <span>Controller Sign</span>
+                        </div>
+
+                          <div>
+                              <span id="student-sign">
+                                
+                              </span>
+                              <span>Student Sign</span>
+                          </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="back-card">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
+    
+</body>
+</html>
