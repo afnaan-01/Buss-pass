@@ -344,21 +344,174 @@ body {
         width: 90vw;
         height: 90vh;
     }
+
+/* Front Card design */
+
+.student-name {
+    font-size: 170%;
+}
+
+.student-class {
+    font-size:  110%;
+}
+
+.from :nth-child(1),
+.to :nth-child(1) {
+    font-size: 80%;
+}
+
+.from :nth-child(2),
+.to :nth-child(2) {
+    font-size:105%;
+}
+
+.from :nth-child(3),
+.to :nth-child(3) {
+    font-size: 10px;
+}
+
+.start-date,
+.end-date {
+    font-size: 100%;
+    gap: 2px;
+    font-family: "Roboto", sans-serif;
+}
+
+.basic-details>span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.basic-details>span :nth-child(1) {
+    font-size:80%;
+}
+
+.basic-details>span :nth-child(2) {
+    font-size:85%;
+}
+
+.qr {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
     
-.front-card {
-    position: absolute;
-    top: 0;
-    left: 0;
+    align-self: center;
+}
+
+.sign-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.sign-container>div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.sign-container>div :nth-child(1) {
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.sign-container>div :nth-child(2) {
+    font-size: 13px;
+}
+
+
+
+/* Css for back card  Used for dates*/
+
+.back-card {
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgb(104, 185, 216), rgb(22, 115, 255));
+    background: linear-gradient(rgb(61, 138, 253), rgb(110, 192, 225));
     border-radius: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+
+.back-main {
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    
+}
+
+.on-going,.on-coming{
+    height: 100%;
+    width: 40%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
 }
+
+.dates {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8%;
+}
+
+.date{
+      border: 2px solid rgb(211, 211, 211);
+      font-size: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+}
+
+
+.date-fill{
+     background-color: rgb(61, 138, 253);
+     color:white;
+     border: none;
+    }
+
+
+ #back-icon{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 150%;
+        color: white;
+        cursor: pointer;
+ }   
+
+ #go-icon{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 150%;
+    color: white;
+    cursor: pointer;
+ }
+    
    }
