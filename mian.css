@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid green; */
+    border: 1px solid green;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -201,6 +201,7 @@ body {
     color: rgb(71, 71, 71);
     display: flex;
     flex-wrap: nowrap;
+    width: fit-content;
 }
 
 .basic-details>span :nth-child(2) {
@@ -213,7 +214,6 @@ body {
     height: 80px;
     width: 80px;
     border: 1px solid black;
-    
     align-self: center;
 }
 
@@ -223,6 +223,8 @@ body {
     justify-content: space-between;
     width: 100%;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -388,7 +390,9 @@ body {
 }
 
 .basic-details>span :nth-child(2) {
-    font-size:85%;
+    font-weight: bold;
+    font-size: 12px;
+    align-self: flex-end;
 }
 
 .qr {
