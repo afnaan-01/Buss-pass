@@ -1,16 +1,39 @@
 
 //Function craetes dates blocks according to width and height of container
 
- let dateMaker = ()=>{
-       let goingContainer = document.querySelector('#going-dates');
-       let comingContainer = document.querySelector('#coming-dates');
+let dateMaker = ()=>{
+    let datesContainer = document.querySelectorAll('.dates');
+     console.log(datesContainer);
 
-       let heightForDate = goingContainer.getBoundingClientRect().height /16;
-         
-          for(let i = 1; i<=32; i++){
-              goingContainer.innerHTML += `<span class="date">${i}</span>`;
-              comingContainer.innerHTML += `<span class="date">${i}</span>`;
+       datesContainer.forEach(dates => {   
+          let heightForDate = dates.getBoundingClientRect().height / 12;
+          for(let i = 1; i<=33; i++){
+              elm = document.createElement('span');
+              elm.innerHTML = `${i}`;
+              elm.classList = 'date';
+              elm.style.height = heightForDate + 'px';
+              elm.style.width = heightForDate + 'px';
+
+              if(i<=10){
+                elm.classList += ' date-fill';
+              }
+              
+              if (!(i > 31)) {
+                 
+                  dates.appendChild(elm);   
+              }
           }
- };
+      });
+};
 
- dateMaker();
+dateMaker();
+
+
+
+ document.querySelector('#back-icon').addEventListener('click',()=>{
+           document.querySelector('.pass-container').style.transform = 'rotateY(0deg)';
+ });
+
+ document.querySelector('#go-icon').addEventListener('click',()=>{
+     document.querySelector('.pass-container').style.transform = 'rotateY(180deg)';
+});
